@@ -37,7 +37,8 @@
 //! let salt = b"randomsalt";
 //! let config = Config::default();
 //! let hash = argon2::hash_encoded(password, salt, &config).unwrap();
-//! let matches = argon2::verify_encoded(&hash, password).unwrap();
+//! let matches = argon2::verify_encoded(&hash, password, vec![]/* secret */, vec![] /* associated data */)
+//!     .unwrap();
 //! assert!(matches);
 //! ```
 //!
@@ -55,12 +56,12 @@
 //!     time_cost: 10,
 //!     lanes: 4,
 //!     thread_mode: ThreadMode::Parallel,
-//!     secret: vec![],
+//!     secret: vec![1],
 //!     ad: vec![],
 //!     hash_length: 32
 //! };
 //! let hash = argon2::hash_encoded(password, salt, &config).unwrap();
-//! let matches = argon2::verify_encoded(&hash, password).unwrap();
+//! let matches = argon2::verify_encoded(&hash, password, vec![1], vec![]).unwrap();
 //! assert!(matches);
 //! ```
 //!
@@ -74,7 +75,6 @@
 //!
 //! This version uses the standard implementation and does not yet implement
 //! optimizations. Therefore, it is not the fastest implementation available.
-
 
 extern crate base64;
 extern crate blake2_rfc;

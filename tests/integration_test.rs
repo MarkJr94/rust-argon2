@@ -11,7 +11,7 @@
 extern crate argon2;
 extern crate hex;
 
-use argon2::{Error, Config, ThreadMode, Variant, Version};
+use argon2::{Config, Error, ThreadMode, Variant, Version};
 use hex::ToHex;
 
 #[cfg(not(debug_assertions))]
@@ -27,7 +27,7 @@ fn test_argon2d_version10_1() {
         b"somesalt",
         "2ec0d925358f5830caf0c1cc8a3ee58b34505759428b859c79b72415f51f9221",
         "$argon2d$m=65536,t=2,p=1$c29tZXNhbHQ\
-               $LsDZJTWPWDDK8MHMij7lizRQV1lCi4WcebckFfUfkiE",
+         $LsDZJTWPWDDK8MHMij7lizRQV1lCi4WcebckFfUfkiE",
     );
 }
 
@@ -44,7 +44,7 @@ fn test_argon2d_version10_2() {
         b"somesalt",
         "28ae0d1037991b55faec18425274d5f9169b2f44bee19b45b7a561d489d6019a",
         "$argon2d$m=1048576,t=2,p=1$c29tZXNhbHQ\
-               $KK4NEDeZG1X67BhCUnTV+RabL0S+4ZtFt6Vh1InWAZo",
+         $KK4NEDeZG1X67BhCUnTV+RabL0S+4ZtFt6Vh1InWAZo",
     );
 }
 
@@ -61,7 +61,7 @@ fn test_argon2d_version10_3() {
         b"somesalt",
         "41c89760d85b80ba1be7e959ebd16390bfb4176db9466d70f670457ccade4ec8",
         "$argon2d$m=262144,t=2,p=1$c29tZXNhbHQ\
-               $QciXYNhbgLob5+lZ69FjkL+0F225Rm1w9nBFfMreTsg",
+         $QciXYNhbgLob5+lZ69FjkL+0F225Rm1w9nBFfMreTsg",
     );
 }
 
@@ -77,7 +77,7 @@ fn test_argon2d_version10_4() {
         b"somesalt",
         "bd404868ff00c52e7543c8332e6a772a5724892d7e328d5cf253bbc8e726b371",
         "$argon2d$m=256,t=2,p=1$c29tZXNhbHQ\
-               $vUBIaP8AxS51Q8gzLmp3KlckiS1+Mo1c8lO7yOcms3E",
+         $vUBIaP8AxS51Q8gzLmp3KlckiS1+Mo1c8lO7yOcms3E",
     );
 }
 
@@ -93,7 +93,7 @@ fn test_argon2d_version10_5() {
         b"somesalt",
         "6a91d02b9f8854ba0841f04aa6e53c1d3374c0a0c646b8e431b03de805b91ec3",
         "$argon2d$m=256,t=2,p=2$c29tZXNhbHQ\
-               $apHQK5+IVLoIQfBKpuU8HTN0wKDGRrjkMbA96AW5HsM",
+         $apHQK5+IVLoIQfBKpuU8HTN0wKDGRrjkMbA96AW5HsM",
     );
 }
 
@@ -110,7 +110,7 @@ fn test_argon2d_version10_6() {
         b"somesalt",
         "05d1d0a85f499e9397b9c1c936b20f366a7273ccf259e2edfdb44ca8f86dd11f",
         "$argon2d$m=65536,t=1,p=1$c29tZXNhbHQ\
-               $BdHQqF9JnpOXucHJNrIPNmpyc8zyWeLt/bRMqPht0R8",
+         $BdHQqF9JnpOXucHJNrIPNmpyc8zyWeLt/bRMqPht0R8",
     );
 }
 
@@ -127,7 +127,7 @@ fn test_argon2d_version10_7() {
         b"somesalt",
         "99e787faced20949df5a3b9c8620712b45cfea061716adf8b13efb7feee44084",
         "$argon2d$m=65536,t=4,p=1$c29tZXNhbHQ\
-               $meeH+s7SCUnfWjuchiBxK0XP6gYXFq34sT77f+7kQIQ",
+         $meeH+s7SCUnfWjuchiBxK0XP6gYXFq34sT77f+7kQIQ",
     );
 }
 
@@ -144,7 +144,7 @@ fn test_argon2d_version10_8() {
         b"somesalt",
         "b9c2e4a4ec9a6db99ca4e2b549dd64256305b95754b0a70ad757cd1ff7eed4a4",
         "$argon2d$m=65536,t=2,p=1$c29tZXNhbHQ\
-               $ucLkpOyabbmcpOK1Sd1kJWMFuVdUsKcK11fNH/fu1KQ",
+         $ucLkpOyabbmcpOK1Sd1kJWMFuVdUsKcK11fNH/fu1KQ",
     );
 }
 
@@ -161,7 +161,7 @@ fn test_argon2d_version10_9() {
         b"diffsalt",
         "d1da14196c233e0a3cb687aa6e6c465cb50669ffdb891158c2b75722395f14d5",
         "$argon2d$m=65536,t=2,p=1$ZGlmZnNhbHQ\
-               $0doUGWwjPgo8toeqbmxGXLUGaf/biRFYwrdXIjlfFNU",
+         $0doUGWwjPgo8toeqbmxGXLUGaf/biRFYwrdXIjlfFNU",
     );
 }
 
@@ -178,7 +178,7 @@ fn test_argon2d_version13_1() {
         b"somesalt",
         "955e5d5b163a1b60bba35fc36d0496474fba4f6b59ad53628666f07fb2f93eaf",
         "$argon2d$v=19$m=65536,t=2,p=1$c29tZXNhbHQ\
-               $lV5dWxY6G2C7o1/DbQSWR0+6T2tZrVNihmbwf7L5Pq8",
+         $lV5dWxY6G2C7o1/DbQSWR0+6T2tZrVNihmbwf7L5Pq8",
     );
 }
 
@@ -195,7 +195,7 @@ fn test_argon2d_version13_2() {
         b"somesalt",
         "c2d680a6e7ac1b75e2c2b1e5e71b1701584869492efea4a76ccc91fec622d1ae",
         "$argon2d$v=19$m=1048576,t=2,p=1$c29tZXNhbHQ\
-               $wtaApuesG3XiwrHl5xsXAVhIaUku/qSnbMyR/sYi0a4",
+         $wtaApuesG3XiwrHl5xsXAVhIaUku/qSnbMyR/sYi0a4",
     );
 }
 
@@ -212,7 +212,7 @@ fn test_argon2d_version13_3() {
         b"somesalt",
         "9678b3379ce20ddc96fa38f045c8cdc96282287ff2848efd867582b9528a2155",
         "$argon2d$v=19$m=262144,t=2,p=1$c29tZXNhbHQ\
-               $lnizN5ziDdyW+jjwRcjNyWKCKH/yhI79hnWCuVKKIVU",
+         $lnizN5ziDdyW+jjwRcjNyWKCKH/yhI79hnWCuVKKIVU",
     );
 }
 
@@ -228,7 +228,7 @@ fn test_argon2d_version13_4() {
         b"somesalt",
         "25c4ee8ba448054b49efc804e478b9d823be1f9bd2e99f51d6ec4007a3a1501f",
         "$argon2d$v=19$m=256,t=2,p=1$c29tZXNhbHQ\
-               $JcTui6RIBUtJ78gE5Hi52CO+H5vS6Z9R1uxAB6OhUB8",
+         $JcTui6RIBUtJ78gE5Hi52CO+H5vS6Z9R1uxAB6OhUB8",
     );
 }
 
@@ -244,7 +244,7 @@ fn test_argon2d_version13_5() {
         b"somesalt",
         "7b69c92d7c3889aad1281dbc8baefc12cc37c80f1c75e33ef2c2d40c28ebc573",
         "$argon2d$v=19$m=256,t=2,p=2$c29tZXNhbHQ\
-               $e2nJLXw4iarRKB28i678Esw3yA8cdeM+8sLUDCjrxXM",
+         $e2nJLXw4iarRKB28i678Esw3yA8cdeM+8sLUDCjrxXM",
     );
 }
 
@@ -261,7 +261,7 @@ fn test_argon2d_version13_6() {
         b"somesalt",
         "8193708c030f09b121526b0efdffce738fef0ddb13937a65d43f3f1eab9aa802",
         "$argon2d$v=19$m=65536,t=1,p=1$c29tZXNhbHQ\
-               $gZNwjAMPCbEhUmsO/f/Oc4/vDdsTk3pl1D8/HquaqAI",
+         $gZNwjAMPCbEhUmsO/f/Oc4/vDdsTk3pl1D8/HquaqAI",
     );
 }
 
@@ -278,7 +278,7 @@ fn test_argon2d_version13_7() {
         b"somesalt",
         "cd1e2816cf8895fffe535b87b7a0aa3612f73c6ce063de83b1e7b4621ca0afe6",
         "$argon2d$v=19$m=65536,t=4,p=1$c29tZXNhbHQ\
-               $zR4oFs+Ilf/+U1uHt6CqNhL3PGzgY96Dsee0Yhygr+Y",
+         $zR4oFs+Ilf/+U1uHt6CqNhL3PGzgY96Dsee0Yhygr+Y",
     );
 }
 
@@ -295,7 +295,7 @@ fn test_argon2d_version13_8() {
         b"somesalt",
         "a34dafc893182d521ae467bbfdce60f973a1223c4615654efeb0bfef8a930e25",
         "$argon2d$v=19$m=65536,t=2,p=1$c29tZXNhbHQ\
-               $o02vyJMYLVIa5Ge7/c5g+XOhIjxGFWVO/rC/74qTDiU",
+         $o02vyJMYLVIa5Ge7/c5g+XOhIjxGFWVO/rC/74qTDiU",
     );
 }
 
@@ -312,7 +312,7 @@ fn test_argon2d_version13_9() {
         b"diffsalt",
         "f00eb8a999a1c6949c61fbbee3c3cece5066e3ff5c79aed421266055e2bf4dd7",
         "$argon2d$v=19$m=65536,t=2,p=1$ZGlmZnNhbHQ\
-               $8A64qZmhxpScYfu+48POzlBm4/9cea7UISZgVeK/Tdc",
+         $8A64qZmhxpScYfu+48POzlBm4/9cea7UISZgVeK/Tdc",
     );
 }
 
@@ -329,7 +329,7 @@ fn test_argon2i_version10_1() {
         b"somesalt",
         "f6c4db4a54e2a370627aff3db6176b94a2a209a62c8e36152711802f7b30c694",
         "$argon2i$m=65536,t=2,p=1$c29tZXNhbHQ\
-               $9sTbSlTio3Biev89thdrlKKiCaYsjjYVJxGAL3swxpQ",
+         $9sTbSlTio3Biev89thdrlKKiCaYsjjYVJxGAL3swxpQ",
     );
 }
 
@@ -346,7 +346,7 @@ fn test_argon2i_version10_2() {
         b"somesalt",
         "9690ec55d28d3ed32562f2e73ea62b02b018757643a2ae6e79528459de8106e9",
         "$argon2i$m=1048576,t=2,p=1$c29tZXNhbHQ\
-               $lpDsVdKNPtMlYvLnPqYrArAYdXZDoq5ueVKEWd6BBuk",
+         $lpDsVdKNPtMlYvLnPqYrArAYdXZDoq5ueVKEWd6BBuk",
     );
 }
 
@@ -363,7 +363,7 @@ fn test_argon2i_version10_3() {
         b"somesalt",
         "3e689aaa3d28a77cf2bc72a51ac53166761751182f1ee292e3f677a7da4c2467",
         "$argon2i$m=262144,t=2,p=1$c29tZXNhbHQ\
-               $Pmiaqj0op3zyvHKlGsUxZnYXURgvHuKS4/Z3p9pMJGc",
+         $Pmiaqj0op3zyvHKlGsUxZnYXURgvHuKS4/Z3p9pMJGc",
     );
 }
 
@@ -379,7 +379,7 @@ fn test_argon2i_version10_4() {
         b"somesalt",
         "fd4dd83d762c49bdeaf57c47bdcd0c2f1babf863fdeb490df63ede9975fccf06",
         "$argon2i$m=256,t=2,p=1$c29tZXNhbHQ\
-               $/U3YPXYsSb3q9XxHvc0MLxur+GP960kN9j7emXX8zwY",
+         $/U3YPXYsSb3q9XxHvc0MLxur+GP960kN9j7emXX8zwY",
     );
 }
 
@@ -395,7 +395,7 @@ fn test_argon2i_version10_5() {
         b"somesalt",
         "b6c11560a6a9d61eac706b79a2f97d68b4463aa3ad87e00c07e2b01e90c564fb",
         "$argon2i$m=256,t=2,p=2$c29tZXNhbHQ\
-               $tsEVYKap1h6scGt5ovl9aLRGOqOth+AMB+KwHpDFZPs",
+         $tsEVYKap1h6scGt5ovl9aLRGOqOth+AMB+KwHpDFZPs",
     );
 }
 
@@ -412,7 +412,7 @@ fn test_argon2i_version10_6() {
         b"somesalt",
         "81630552b8f3b1f48cdb1992c4c678643d490b2b5eb4ff6c4b3438b5621724b2",
         "$argon2i$m=65536,t=1,p=1$c29tZXNhbHQ\
-               $gWMFUrjzsfSM2xmSxMZ4ZD1JCytetP9sSzQ4tWIXJLI",
+         $gWMFUrjzsfSM2xmSxMZ4ZD1JCytetP9sSzQ4tWIXJLI",
     );
 }
 
@@ -429,7 +429,7 @@ fn test_argon2i_version10_7() {
         b"somesalt",
         "f212f01615e6eb5d74734dc3ef40ade2d51d052468d8c69440a3a1f2c1c2847b",
         "$argon2i$m=65536,t=4,p=1$c29tZXNhbHQ\
-               $8hLwFhXm6110c03D70Ct4tUdBSRo2MaUQKOh8sHChHs",
+         $8hLwFhXm6110c03D70Ct4tUdBSRo2MaUQKOh8sHChHs",
     );
 }
 
@@ -446,7 +446,7 @@ fn test_argon2i_version10_8() {
         b"somesalt",
         "e9c902074b6754531a3a0be519e5baf404b30ce69b3f01ac3bf21229960109a3",
         "$argon2i$m=65536,t=2,p=1$c29tZXNhbHQ\
-               $6ckCB0tnVFMaOgvlGeW69ASzDOabPwGsO/ISKZYBCaM",
+         $6ckCB0tnVFMaOgvlGeW69ASzDOabPwGsO/ISKZYBCaM",
     );
 }
 
@@ -463,7 +463,7 @@ fn test_argon2i_version10_9() {
         b"diffsalt",
         "79a103b90fe8aef8570cb31fc8b22259778916f8336b7bdac3892569d4f1c497",
         "$argon2i$m=65536,t=2,p=1$ZGlmZnNhbHQ\
-               $eaEDuQ/orvhXDLMfyLIiWXeJFvgza3vaw4kladTxxJc",
+         $eaEDuQ/orvhXDLMfyLIiWXeJFvgza3vaw4kladTxxJc",
     );
 }
 
@@ -480,7 +480,7 @@ fn test_argon2i_version13_1() {
         b"somesalt",
         "c1628832147d9720c5bd1cfd61367078729f6dfb6f8fea9ff98158e0d7816ed0",
         "$argon2i$v=19$m=65536,t=2,p=1$c29tZXNhbHQ\
-               $wWKIMhR9lyDFvRz9YTZweHKfbftvj+qf+YFY4NeBbtA",
+         $wWKIMhR9lyDFvRz9YTZweHKfbftvj+qf+YFY4NeBbtA",
     );
 }
 
@@ -497,7 +497,7 @@ fn test_argon2i_version13_2() {
         b"somesalt",
         "d1587aca0922c3b5d6a83edab31bee3c4ebaef342ed6127a55d19b2351ad1f41",
         "$argon2i$v=19$m=1048576,t=2,p=1$c29tZXNhbHQ\
-               $0Vh6ygkiw7XWqD7asxvuPE667zQu1hJ6VdGbI1GtH0E",
+         $0Vh6ygkiw7XWqD7asxvuPE667zQu1hJ6VdGbI1GtH0E",
     );
 }
 
@@ -514,7 +514,7 @@ fn test_argon2i_version13_3() {
         b"somesalt",
         "296dbae80b807cdceaad44ae741b506f14db0959267b183b118f9b24229bc7cb",
         "$argon2i$v=19$m=262144,t=2,p=1$c29tZXNhbHQ\
-               $KW266AuAfNzqrUSudBtQbxTbCVkmexg7EY+bJCKbx8s",
+         $KW266AuAfNzqrUSudBtQbxTbCVkmexg7EY+bJCKbx8s",
     );
 }
 
@@ -530,7 +530,7 @@ fn test_argon2i_version13_4() {
         b"somesalt",
         "89e9029f4637b295beb027056a7336c414fadd43f6b208645281cb214a56452f",
         "$argon2i$v=19$m=256,t=2,p=1$c29tZXNhbHQ\
-               $iekCn0Y3spW+sCcFanM2xBT63UP2sghkUoHLIUpWRS8",
+         $iekCn0Y3spW+sCcFanM2xBT63UP2sghkUoHLIUpWRS8",
     );
 }
 
@@ -546,7 +546,7 @@ fn test_argon2i_version13_5() {
         b"somesalt",
         "4ff5ce2769a1d7f4c8a491df09d41a9fbe90e5eb02155a13e4c01e20cd4eab61",
         "$argon2i$v=19$m=256,t=2,p=2$c29tZXNhbHQ\
-               $T/XOJ2mh1/TIpJHfCdQan76Q5esCFVoT5MAeIM1Oq2E",
+         $T/XOJ2mh1/TIpJHfCdQan76Q5esCFVoT5MAeIM1Oq2E",
     );
 }
 
@@ -563,7 +563,7 @@ fn test_argon2i_version13_6() {
         b"somesalt",
         "d168075c4d985e13ebeae560cf8b94c3b5d8a16c51916b6f4ac2da3ac11bbecf",
         "$argon2i$v=19$m=65536,t=1,p=1$c29tZXNhbHQ\
-               $0WgHXE2YXhPr6uVgz4uUw7XYoWxRkWtvSsLaOsEbvs8",
+         $0WgHXE2YXhPr6uVgz4uUw7XYoWxRkWtvSsLaOsEbvs8",
     );
 }
 
@@ -580,7 +580,7 @@ fn test_argon2i_version13_7() {
         b"somesalt",
         "aaa953d58af3706ce3df1aefd4a64a84e31d7f54175231f1285259f88174ce5b",
         "$argon2i$v=19$m=65536,t=4,p=1$c29tZXNhbHQ\
-               $qqlT1YrzcGzj3xrv1KZKhOMdf1QXUjHxKFJZ+IF0zls",
+         $qqlT1YrzcGzj3xrv1KZKhOMdf1QXUjHxKFJZ+IF0zls",
     );
 }
 
@@ -597,7 +597,7 @@ fn test_argon2i_version13_8() {
         b"somesalt",
         "14ae8da01afea8700c2358dcef7c5358d9021282bd88663a4562f59fb74d22ee",
         "$argon2i$v=19$m=65536,t=2,p=1$c29tZXNhbHQ\
-               $FK6NoBr+qHAMI1jc73xTWNkCEoK9iGY6RWL1n7dNIu4",
+         $FK6NoBr+qHAMI1jc73xTWNkCEoK9iGY6RWL1n7dNIu4",
     );
 }
 
@@ -614,7 +614,7 @@ fn test_argon2i_version13_9() {
         b"diffsalt",
         "b0357cccfbef91f3860b0dba447b2348cbefecadaf990abfe9cc40726c521271",
         "$argon2i$v=19$m=65536,t=2,p=1$ZGlmZnNhbHQ\
-               $sDV8zPvvkfOGCw26RHsjSMvv7K2vmQq/6cxAcmxSEnE",
+         $sDV8zPvvkfOGCw26RHsjSMvv7K2vmQq/6cxAcmxSEnE",
     );
 }
 
@@ -631,7 +631,7 @@ fn test_argon2id_version10_1() {
         b"somesalt",
         "980ebd24a4e667f16346f9d4a78b175728783613e0cc6fb17c2ec884b16435df",
         "$argon2id$v=16$m=65536,t=2,p=1$c29tZXNhbHQ\
-               $mA69JKTmZ/FjRvnUp4sXVyh4NhPgzG+xfC7IhLFkNd8",
+         $mA69JKTmZ/FjRvnUp4sXVyh4NhPgzG+xfC7IhLFkNd8",
     );
 }
 
@@ -648,7 +648,7 @@ fn test_argon2id_version10_2() {
         b"somesalt",
         "ce622fc2053acd224c06e7be122f9e9554b62b8a414b032056b46123422e32ab",
         "$argon2id$v=16$m=1048576,t=2,p=1$c29tZXNhbHQ\
-               $zmIvwgU6zSJMBue+Ei+elVS2K4pBSwMgVrRhI0IuMqs",
+         $zmIvwgU6zSJMBue+Ei+elVS2K4pBSwMgVrRhI0IuMqs",
     );
 }
 
@@ -665,7 +665,7 @@ fn test_argon2id_version10_3() {
         b"somesalt",
         "01cbafb58f2dc764adced1ab9a90fcb62f6ed8a066023b6ba0c204db6c9b90cd",
         "$argon2id$v=16$m=262144,t=2,p=1$c29tZXNhbHQ\
-               $AcuvtY8tx2StztGrmpD8ti9u2KBmAjtroMIE22ybkM0",
+         $AcuvtY8tx2StztGrmpD8ti9u2KBmAjtroMIE22ybkM0",
     );
 }
 
@@ -681,7 +681,7 @@ fn test_argon2id_version10_4() {
         b"somesalt",
         "da070e576e50f2f38a3c897cbddc6c7fb4028e870971ff9eae7b4e1879295e6e",
         "$argon2id$v=16$m=256,t=2,p=1$c29tZXNhbHQ\
-               $2gcOV25Q8vOKPIl8vdxsf7QCjocJcf+erntOGHkpXm4",
+         $2gcOV25Q8vOKPIl8vdxsf7QCjocJcf+erntOGHkpXm4",
     );
 }
 
@@ -697,7 +697,7 @@ fn test_argon2id_version10_5() {
         b"somesalt",
         "f8aabb5315c63cddcdb3b4a021550928e525699da8fcbd1c2b0b1ccd35cc87a7",
         "$argon2id$v=16$m=256,t=2,p=2$c29tZXNhbHQ\
-               $+Kq7UxXGPN3Ns7SgIVUJKOUlaZ2o/L0cKwsczTXMh6c",
+         $+Kq7UxXGPN3Ns7SgIVUJKOUlaZ2o/L0cKwsczTXMh6c",
     );
 }
 
@@ -714,7 +714,7 @@ fn test_argon2id_version10_6() {
         b"somesalt",
         "8e0f310407a989013a823defbd6cbae54d86b35d1ac16e4f88eb4645e1357956",
         "$argon2id$v=16$m=65536,t=1,p=1$c29tZXNhbHQ\
-               $jg8xBAepiQE6gj3vvWy65U2Gs10awW5PiOtGReE1eVY",
+         $jg8xBAepiQE6gj3vvWy65U2Gs10awW5PiOtGReE1eVY",
     );
 }
 
@@ -731,7 +731,7 @@ fn test_argon2id_version10_7() {
         b"somesalt",
         "16653426e582143da6a0ff75daac9fa94c21ac2c221c96bd3645a5c15c2d962a",
         "$argon2id$v=16$m=65536,t=4,p=1$c29tZXNhbHQ\
-               $FmU0JuWCFD2moP912qyfqUwhrCwiHJa9NkWlwVwtlio",
+         $FmU0JuWCFD2moP912qyfqUwhrCwiHJa9NkWlwVwtlio",
     );
 }
 
@@ -748,7 +748,7 @@ fn test_argon2id_version10_8() {
         b"somesalt",
         "75709d4c96a2c235696a77eefeecf33e64221f470b26177c19e5e27642612dbb",
         "$argon2id$v=16$m=65536,t=2,p=1$c29tZXNhbHQ\
-               $dXCdTJaiwjVpanfu/uzzPmQiH0cLJhd8GeXidkJhLbs",
+         $dXCdTJaiwjVpanfu/uzzPmQiH0cLJhd8GeXidkJhLbs",
     );
 }
 
@@ -765,7 +765,7 @@ fn test_argon2id_version10_9() {
         b"diffsalt",
         "f0b57cfe03a9d78c4700e2fe802002343660a56b1b5d21ead788e6bb44ef48d3",
         "$argon2id$v=16$m=65536,t=2,p=1$ZGlmZnNhbHQ\
-               $8LV8/gOp14xHAOL+gCACNDZgpWsbXSHq14jmu0TvSNM",
+         $8LV8/gOp14xHAOL+gCACNDZgpWsbXSHq14jmu0TvSNM",
     );
 }
 
@@ -782,7 +782,7 @@ fn test_argon2id_version13_1() {
         b"somesalt",
         "09316115d5cf24ed5a15a31a3ba326e5cf32edc24702987c02b6566f61913cf7",
         "$argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ\
-               $CTFhFdXPJO1aFaMaO6Mm5c8y7cJHAph8ArZWb2GRPPc",
+         $CTFhFdXPJO1aFaMaO6Mm5c8y7cJHAph8ArZWb2GRPPc",
     );
 }
 
@@ -799,7 +799,7 @@ fn test_argon2id_version13_2() {
         b"somesalt",
         "16a1cb8a061cf1f8b16fb195fe559fa6d1435e43dded2f4fb07293176be892fa",
         "$argon2id$v=19$m=1048576,t=2,p=1$c29tZXNhbHQ\
-               $FqHLigYc8fixb7GV/lWfptFDXkPd7S9PsHKTF2vokvo",
+         $FqHLigYc8fixb7GV/lWfptFDXkPd7S9PsHKTF2vokvo",
     );
 }
 
@@ -816,7 +816,7 @@ fn test_argon2id_version13_3() {
         b"somesalt",
         "78fe1ec91fb3aa5657d72e710854e4c3d9b9198c742f9616c2f085bed95b2e8c",
         "$argon2id$v=19$m=262144,t=2,p=1$c29tZXNhbHQ\
-               $eP4eyR+zqlZX1y5xCFTkw9m5GYx0L5YWwvCFvtlbLow",
+         $eP4eyR+zqlZX1y5xCFTkw9m5GYx0L5YWwvCFvtlbLow",
     );
 }
 
@@ -832,7 +832,7 @@ fn test_argon2id_version13_4() {
         b"somesalt",
         "9dfeb910e80bad0311fee20f9c0e2b12c17987b4cac90c2ef54d5b3021c68bfe",
         "$argon2id$v=19$m=256,t=2,p=1$c29tZXNhbHQ\
-               $nf65EOgLrQMR/uIPnA4rEsF5h7TKyQwu9U1bMCHGi/4",
+         $nf65EOgLrQMR/uIPnA4rEsF5h7TKyQwu9U1bMCHGi/4",
     );
 }
 
@@ -848,7 +848,7 @@ fn test_argon2id_version13_5() {
         b"somesalt",
         "6d093c501fd5999645e0ea3bf620d7b8be7fd2db59c20d9fff9539da2bf57037",
         "$argon2id$v=19$m=256,t=2,p=2$c29tZXNhbHQ\
-               $bQk8UB/VmZZF4Oo79iDXuL5/0ttZwg2f/5U52iv1cDc",
+         $bQk8UB/VmZZF4Oo79iDXuL5/0ttZwg2f/5U52iv1cDc",
     );
 }
 
@@ -865,7 +865,7 @@ fn test_argon2id_version13_6() {
         b"somesalt",
         "f6a5adc1ba723dddef9b5ac1d464e180fcd9dffc9d1cbf76cca2fed795d9ca98",
         "$argon2id$v=19$m=65536,t=1,p=1$c29tZXNhbHQ\
-               $9qWtwbpyPd3vm1rB1GThgPzZ3/ydHL92zKL+15XZypg",
+         $9qWtwbpyPd3vm1rB1GThgPzZ3/ydHL92zKL+15XZypg",
     );
 }
 
@@ -882,7 +882,7 @@ fn test_argon2id_version13_7() {
         b"somesalt",
         "9025d48e68ef7395cca9079da4c4ec3affb3c8911fe4f86d1a2520856f63172c",
         "$argon2id$v=19$m=65536,t=4,p=1$c29tZXNhbHQ\
-               $kCXUjmjvc5XMqQedpMTsOv+zyJEf5PhtGiUghW9jFyw",
+         $kCXUjmjvc5XMqQedpMTsOv+zyJEf5PhtGiUghW9jFyw",
     );
 }
 
@@ -899,7 +899,7 @@ fn test_argon2id_version13_8() {
         b"somesalt",
         "0b84d652cf6b0c4beaef0dfe278ba6a80df6696281d7e0d2891b817d8c458fde",
         "$argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ\
-               $C4TWUs9rDEvq7w3+J4umqA32aWKB1+DSiRuBfYxFj94",
+         $C4TWUs9rDEvq7w3+J4umqA32aWKB1+DSiRuBfYxFj94",
     );
 }
 
@@ -916,7 +916,7 @@ fn test_argon2id_version13_9() {
         b"diffsalt",
         "bdf32b05ccc42eb15d58fd19b1f856b113da1e9a5874fdcc544308565aa8141c",
         "$argon2id$v=19$m=65536,t=2,p=1$ZGlmZnNhbHQ\
-               $vfMrBczELrFdWP0ZsfhWsRPaHppYdP3MVEMIVlqoFBw",
+         $vfMrBczELrFdWP0ZsfhWsRPaHppYdP3MVEMIVlqoFBw",
     );
 }
 
@@ -925,7 +925,7 @@ fn test_verify_encoded_with_missing_dollar_before_salt_version10() {
     let encoded = "$argon2i$m=65536,t=2,p=1c29tZXNhbHQ\
                    $9sTbSlTio3Biev89thdrlKKiCaYsjjYVJxGAL3swxpQ";
     let password = b"password";
-    let res = argon2::verify_encoded(encoded, password);
+    let res = argon2::verify_encoded(encoded, password, vec![], vec![]);
     assert_eq!(res, Err(Error::DecodingFail));
 }
 
@@ -934,7 +934,7 @@ fn test_verify_encoded_with_missing_dollar_before_salt_version13() {
     let encoded = "$argon2i$v=19$m=65536,t=2,p=1c29tZXNhbHQ\
                    $wWKIMhR9lyDFvRz9YTZweHKfbftvj+qf+YFY4NeBbtA";
     let password = b"password";
-    let res = argon2::verify_encoded(encoded, password);
+    let res = argon2::verify_encoded(encoded, password, vec![], vec![]);
     assert_eq!(res, Err(Error::DecodingFail));
 }
 
@@ -943,7 +943,7 @@ fn test_verify_encoded_with_missing_dollar_before_hash_version10() {
     let encoded = "$argon2i$m=65536,t=2,p=1$c29tZXNhbHQ\
                    9sTbSlTio3Biev89thdrlKKiCaYsjjYVJxGAL3swxpQ";
     let password = b"password";
-    let res = argon2::verify_encoded(encoded, password);
+    let res = argon2::verify_encoded(encoded, password, vec![], vec![]);
     assert_eq!(res, Err(Error::DecodingFail));
 }
 
@@ -952,7 +952,7 @@ fn test_verify_encoded_with_missing_dollar_before_hash_version13() {
     let encoded = "$argon2i$v=19$m=65536,t=2,p=1$c29tZXNhbHQ\
                    wWKIMhR9lyDFvRz9YTZweHKfbftvj+qf+YFY4NeBbtA";
     let password = b"password";
-    let res = argon2::verify_encoded(encoded, password);
+    let res = argon2::verify_encoded(encoded, password, vec![], vec![]);
     assert_eq!(res, Err(Error::DecodingFail));
 }
 
@@ -961,7 +961,7 @@ fn test_verify_encoded_with_too_short_salt_version10() {
     let encoded = "$argon2i$m=65536,t=2,p=1$\
                    $9sTbSlTio3Biev89thdrlKKiCaYsjjYVJxGAL3swxpQ";
     let password = b"password";
-    let res = argon2::verify_encoded(encoded, password);
+    let res = argon2::verify_encoded(encoded, password, vec![], vec![]);
     assert_eq!(res, Err(Error::SaltTooShort));
 }
 
@@ -970,7 +970,7 @@ fn test_verify_encoded_with_too_short_salt_version13() {
     let encoded = "$argon2i$v=19$m=65536,t=2,p=1$\
                    $9sTbSlTio3Biev89thdrlKKiCaYsjjYVJxGAL3swxpQ";
     let password = b"password";
-    let res = argon2::verify_encoded(encoded, password);
+    let res = argon2::verify_encoded(encoded, password, vec![], vec![]);
     assert_eq!(res, Err(Error::SaltTooShort));
 }
 
@@ -980,7 +980,7 @@ fn test_verify_encoded_with_wrong_password_version10() {
     let encoded = "$argon2i$m=65536,t=2,p=1$c29tZXNhbHQ\
                    $b2G3seW+uPzerwQQC+/E1K50CLLO7YXy0JRcaTuswRo";
     let password = b"password"; // should be passwore
-    let res = argon2::verify_encoded(encoded, password);
+    let res = argon2::verify_encoded(encoded, password, vec![], vec![]);
     assert_eq!(res, Ok(false));
 }
 
@@ -990,15 +990,21 @@ fn test_verify_encoded_with_wrong_password_version13() {
     let encoded = "$argon2i$v=19$m=65536,t=2,p=1$c29tZXNhbHQ\
                    $8iIuixkI73Js3G1uMbezQXD0b8LG4SXGsOwoQkdAQIM";
     let password = b"password"; // should be passwore
-    let res = argon2::verify_encoded(encoded, password);
+    let res = argon2::verify_encoded(encoded, password, vec![], vec![]);
     assert_eq!(res, Ok(false));
 }
 
 #[test]
 fn test_encoded_len_returns_correct_length() {
     assert_eq!(argon2::encoded_len(Variant::Argon2d, 256, 1, 1, 8, 32), 83);
-    assert_eq!(argon2::encoded_len(Variant::Argon2i, 4096, 10, 10, 8, 32), 86);
-    assert_eq!(argon2::encoded_len(Variant::Argon2id, 65536, 100, 10, 8, 32), 89);
+    assert_eq!(
+        argon2::encoded_len(Variant::Argon2i, 4096, 10, 10, 8, 32),
+        86
+    );
+    assert_eq!(
+        argon2::encoded_len(Variant::Argon2id, 65536, 100, 10, 8, 32),
+        89
+    );
 }
 
 #[test]
@@ -1065,9 +1071,9 @@ fn hash_test(
     assert_eq!(hash.to_hex(), hex);
 
     let encoded = argon2::hash_encoded(pwd, salt, &config).unwrap();
-    let result = argon2::verify_encoded(encoded.as_str(), pwd).unwrap();
+    let result = argon2::verify_encoded(encoded.as_str(), pwd, vec![], vec![]).unwrap();
     assert!(result);
 
-    let result = argon2::verify_encoded(enc, pwd).unwrap();
+    let result = argon2::verify_encoded(enc, pwd, vec![], vec![]).unwrap();
     assert!(result);
 }
